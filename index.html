@@ -36,9 +36,6 @@
                 <img src="epic.png" class="img-inline" alt="EpicGamesStore">
             </a>
         </div>
-        <div class="vid">
-            <iframe src="https://www.youtube.com/embed/N5XU2KUSCUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
     </div>
 
     <div class="footer">
@@ -53,7 +50,173 @@
                 </ul>
             <p>Design, art, and programming with a custom engine by solo developer <a href="https://linktr.ee/weatherfused">@weatherfused</a>.</p>
             <p>Sound by <a href="https://epicstockmedia.com/">Epic Stock Media</a>.</p>
+
+            <h3>Technical Features</h3>
+            <h4>Game Features:</h4>
+            <ul>
+                <li>Item / crafting tree system</li>
+                <li>Automated factory pipeline system</li>
+                <li>Dynamic weather simulation</li>
+                    <ul>
+                        <li>Storm rendering</li>
+                        <li>Dynamic climate, microclimates in specific regions</li>
+                        <li>Storms/clouds/radar/temperature/winds synchronized over client/server</li>
+                        <li>Weather forecasting</li>
+                        <li>Weather map rendering</li>
+                        <li>Snow accumulation / melting</li>
+                    </ul>
+                <li>Dedicated or in-process server</li>
+                    <ul>
+                        <li>2 player online co-op support with player-hosted servers</li>
+                        <li>Epic Games API integration for authentication</li>
+                    </ul>
+                <li>First-person camera</li>
+                    <ul>
+                        <li>Wield and use items</li>
+                        <li>Mouse-picking with OBBs and AABBs</li>
+                    </ul>
+                <li>Vegetation</li>
+                    <ul>
+                        <li>Generated based on regional climate</li>
+                    </ul>
+                <li>Flight system</li>
+                <li>Save system</li>
+                <li>Base-building</li>
+                <li>Building construction/deconstruction/configuration/repairs</li>
+            </ul>
+            <h4>Engine Features:</h4>
+            <ul>
+                <li>Networking</li>
+                    <ul>
+                        <li>Custom binary protocol or JSON (for debugging)</li>
+                        <li>Client/Server model</li>
+                            <ui>
+                                <li>Client-side interpolation</li>
+                                <li>TCP</li>
+                            </ui>
+                        <li>Authoritiative game server features</li>
+                            <ui>
+                                <li>Client-side prediction</li>
+                            </ui>
+                    </ul>
+                <li>Renderer</li>
+                    <ul>
+                        <li>Shader loading / hot-reloading</li>
+                        <li>OpenGL support, more APIs will be supported</li>
+                        <li>Instanced rendering</li>
+                        <li>Transparency pipeline</li>
+                        <li>Pre-pass, post-processing</li>
+                        <li>Forward rendering</li>
+                        <li>Double precision world coordinates</li>
+                    </ul>
+                <li>Input Processing</li>
+                    <ul>
+                        <li>GLFW</li>
+                        <li>Controller and keyboard/mouse support</li>
+                    </ul>
+                <li>Game loop</li>
+                    <ul>
+                        <li>Fixed and variable rate processing</li>
+                    </ul>
+                <li>3D models</li>
+                    <ul>
+                        <li>OBJ file format support</li>
+                        <li>Normal maps</li>
+                        <li>Custom bounding volumes</li>
+                        <li>AABB/OBB calculation</li>
+                        <li>UV sphere generation</li>
+                        <li>Screen-space model outline rendering</li>
+                    </ul>
+                <li>Programmatic animations</li>
+                    <ul>
+                        <li>Entity heirarchies for handling rotations</li>
+                        <li>Quaternion and euler rotations</li>
+                    </ul>
+                <li>Sound system</li>
+                    <ul>
+                        <li>3D spatial sound with prioritization system</li>
+                        <li>OpenAL</li>
+                        <li>OGG Vorbis streaming</li>
+                        <li>WAV sound effects</li>
+                    </ul>
+                <li>World editor</li>
+                    <ul>
+                        <li>Terrain editor</li>
+                        <li>Model placement</li>
+                    </ul>
+                <li>Model editor</li>
+                    <ul>
+                        <li>Used for loading, debugging, and configuring individual models</li>
+                    </ul>
+                <li>Lighting</li>
+                    <ul>
+                        <li>Variant of Blinn-Phong shading</li>
+                        <li>Fresnel</li>
+                        <li>Point lights</li>
+                    </ul>
+                <li>Frustum culling</li>
+                <li>Terrain</li>
+                    <ul>
+                        <li>Height map with normals / tangents</li>
+                        <li>Custom serialization</li>
+                        <li>Texturing based off of the Witcher 3 terrain design</li>
+                        <li>Chunked terrain with multi-threaded streaming from disk + memory</li>
+                        <li>Tri-planar mapping</li>
+                    </ul>
+                <li>Sky dome</li>
+                    <ul>
+                        <li>Day/night cycle</li>
+                        <li>Dynamic cloud cover based off of perlin noise</li>
+                    </ul>
+                <li>Particles</li>
+                    <ul>
+                        <li>Soft particles</li>
+                    </ul>
+                <li>Shadows</li>
+                    <ul>
+                        <li>Cascaded shadow maps</li>
+                        <li>Soft-shadows (Exponential and variance shadow maps)</li>
+                    </ul>
+                <li>God/crepuscular rays in screen space</li>
+                <li>Anti-aliasing (FXAA)</li>
+                <li>Ambient occlusion (SSAO)</li>
+                <li>Text rendering</li>
+                    <ul>
+                        <li>Signed-distance field fonts</li>
+                    </ul>
+                <li>UI system</li>
+                    <ul>
+                        <li>Immediate-mode UI</li>
+                        <li>Scalable</li>
+                        <li>World-space HUD</li>
+                    </ul>
+                <li>Water</li>
+                    <ul>
+                        <li>Gerstner waves</li>
+                        <li>Foam rendering</li>
+                    </ul>
+                <li>Collision detection and response</li>
+                    <ul>
+                        <li>Swept sphere algorithm</li>
+                        <li>Gravity</li>
+                        <li>Fall damage</li>
+                    </ul>
+                <li>Grass rendering</li>
+                <li>Color grading</li>
+                <li>Gamma correction / HDR</li>
+                <li>Multi-pass bloom</li>
+                <li>Spatial partitioning</li>
+                <li>Distance fog, height fog</li>
+                <li>Profiling system</li>
+                <li>Console</li>
+                <li>Custom binary protocol</li>
+                    <ul>
+                        <li>Used for both networking and file IO</li>
+                    </ul>
+                <li>Object pooling</li>
+            </ul>
         </div>
+
 
         <p class="copy">Copyright © (2023) Weatherfused Games LLC</p>
     </div>
