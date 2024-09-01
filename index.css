@@ -93,7 +93,7 @@ a {
 .img-inline {
 }
 
-.about {
+#about,#dev,#presskit {
   max-width: 1024px;
   margin: 0 auto;
   margin-top: 3vh;
@@ -116,4 +116,30 @@ a {
 .wishlist {
   text-align: center;
   color: white;
+}
+
+.buttons {
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    margin-top: 3vh;
+}
+
+.buttons li {
+  display: inline-block;
+  border: 1px solid;
+  padding:  1vw;
+  margin: 0 0.5vw;
+  width: 8vw;
+  text-align: center;
+  min-width: max-content;
+  cursor: pointer; 
+  white-space: nowrap;
+}
+
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
 }

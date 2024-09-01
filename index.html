@@ -17,7 +17,7 @@
     <link rel="icon" href="community_32_32.ico">
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="index.js"></script>
+    <script src="home.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,19 +41,26 @@
     </div>
 
     <div class="footer">
-        <div class="about">
+        <ul class="buttons">
+            <li class="tab-item" data-target="about">About</li>
+            <li class="tab-item" data-target="dev">Dev</li>
+            <li class="tab-item" data-target="presskit">Press Kit</li>
+        </ul>
+        <div id="about" class="content active">
             <h2>About</h2>
 
-            <p>Skyformer (formerly Xenion) is a first-person survival and automation game about building factories run by drones to power a machine that terraforms a planet.</p>
+            <p>Skyformer is a first-person survival and automation game where you build factories run by drones to power a machine that terraforms a planet. Build bases, prepare for storms, and harness the weather along the way! Terraforming allows you to access new areas/resources, and can cause different types of storms that affect regions in different ways.</p>
             <p>Coming to PC in 2025. Both single-player and co-op is aimed to be supported.</p>
-            <p>A couple of the main development goals:</p>
+            <p>A few of the main development goals:</p>
                 <ul>
-                    <li>An automation game that requires less pre-planning, with more emphasis on survival and tying in the environment into the gameplay. It's a automation game you can still play after a long day of work.</li>
+                    <li>An automation game that's less about optimization and more casual; similar in feel to a survival crafting game. It's a automation game you can still play after a long day of work.</li>
+                    <li>An automation game where the surrounding world and environment ties heavily into the gameplay; you can't just build a factories in a random location.
                     <li>A game that simulates weather and makes it a significant part of the game. As a meteorology enthusiast, I'd like to excite people about weather!</li>
                 </ul>
             <p>Design, art, and programming with a custom engine by solo dev <a href="https://linktr.ee/weatherfused">weatherfused</a>.</p>
             <p>Sound by <a href="https://www.martinmeinerz.com/">Marty Meinerz.</a></p>
-
+        </div>
+        <div id="dev" class="content">
             <h2>Technical Features</h2>
             <h4>Game Features</h4>
             <ul>
@@ -83,7 +90,6 @@
                         <li>Generated based on regional climate</li>
                     </ul>
                 <li>Flight system</li>
-                <li>Save system</li>
                 <li>Base-building</li>
                 <li>Building construction/deconstruction/configuration/repairs</li>
             </ul>
@@ -219,9 +225,11 @@
                 <li>Object pooling</li>
             </ul>
         </div>
+        <div id="presskit" class="content">
+            <p>Coming soon</p>
+        </div>
 
-
-        <p class="copy">Copyright © (2023) Weatherfused Games LLC</p>
+        <p class="copy">Copyright © (2024) Weatherfused Games LLC</p>
     </div>
 </div>
 </body>
